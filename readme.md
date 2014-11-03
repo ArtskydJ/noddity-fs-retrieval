@@ -5,11 +5,10 @@ Noddity Retrieval
 
 This module provides an API to a [Noddity](http://noddity.com) data store full of posts and a list of said posts.
 
-You give it an http root, and that's all it needs to provide
+You give it a path root, and that's all it needs to provide
 
-- an async getter function to download parsed post objects
-- an async getter function to download an array of post objects based on the index.json file from the root directory
-
+- an async getter function to read and parse post objects
+- an async getter function to read an array of post objects based on the index.json file from the root directory
 
 So I have this idea, right?  Where your blog posts could just be a directory with an index file and a bunch of markdown files, just being served out onto the internet.
 
@@ -22,7 +21,7 @@ Useage
 -----
 
 ```js
-	var retrieve = new Retrieve('http://remote-server.com/blogfiles/')
+	var retrieve = new Retrieve('./content')
 
 	retrieve.getIndex(function(err, index) {
 		if (!err && index.length > 0) {
@@ -35,8 +34,6 @@ Useage
 	})
 
 ```
-
-Or whatever.  If my blog ever becomes something like a more useful framework, I might come out and flesh this stuff out a bit.
 
 License
 -----
