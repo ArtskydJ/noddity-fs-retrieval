@@ -6,13 +6,13 @@ module.exports = function NoddityRetrieval(root) {
 	var lookup = function(file, cb, parse) {
 		var data = ''
 		var fullPath = path.resolve(root, file)
-		fs.readFile(file, {encoding: 'utf8'} function (err, data) {
+		fs.readFile(fullPath, {encoding: 'utf8'}, function (err, data) {
 			if (err) {
 				cb(err)
 			} else {
 				try {
 					var parsedData = parse(data)
-					cb(false, parsedData)
+					parsedData && cb(false, parsedData)
 				} catch (e) {
 					cb(new Error("Error parsing file with contents:\n" + data + "\n==========\n" + e.message))
 				}
