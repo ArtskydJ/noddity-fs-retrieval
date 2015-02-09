@@ -1,24 +1,11 @@
-[![Build Status](https://travis-ci.org/TehShrike/noddity-retrieval.svg)](https://travis-ci.org/TehShrike/noddity-retrieval)
-
-Noddity Retrieval
+Noddity FS Retrieval
 =====
 
-This module provides an API to a [Noddity](http://noddity.com) data store full of posts and a list of said posts.
+[![Build Status](https://travis-ci.org/ArtskydJ/noddity-fs-retrieval.svg?branch=master)](https://travis-ci.org/ArtskydJ/noddity-fs-retrieval)
 
-You give it a path root, and that's all it needs to provide
+Alternative to [noddity-retrieval](https://github.com/TehShrike/noddity-retrieval), that uses the file system instead of a server.
 
-- an async getter function to read and parse post objects
-- an async getter function to read an array of post objects based on the index.json file from the root directory
-
-So I have this idea, right?  Where your blog posts could just be a directory with an index file and a bunch of markdown files, just being served out onto the internet.
-
-The general idea is that your root directory of posts contains:
-
-- An index.json file, containing a JSON array of strings representing the file names that are your "official" blog posts, in order.
-- Whatever content files you want to be accessible, in plain text, with metadata stored in a format amenable to [text-metadata-parser](https://github.com/TehShrike/text-metadata-parser).  Markdown recommended.
-
-Useage
------
+# example
 
 ```js
 	var retrieve = new Retrieve('./content')
@@ -35,6 +22,6 @@ Useage
 
 ```
 
-License
------
-[WTFPL](http://wtfpl2.com/)
+# license
+
+[VOL](http://veryopenlicense.com/)

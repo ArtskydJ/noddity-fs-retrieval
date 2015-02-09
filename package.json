@@ -1,12 +1,13 @@
 {
   "name": "noddity-fs-retrieval",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./index.js",
   "author": {
     "name": "artskydj",
     "email": "josephdykstra@gmail.com",
     "url": "http://josephdykstra.com"
   },
+  "license": "VOL",
   "description": "For remote retrieval of a simple blog index and content",
   "repository": {
     "type": "git",
